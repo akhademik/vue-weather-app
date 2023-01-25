@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-screen bg-sky-600">
+  <div class="min-h-screen bg-sky-600">
     <NavBar />
     <RouterView />
   </div>

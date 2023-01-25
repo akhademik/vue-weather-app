@@ -46,31 +46,31 @@ const handleInputSearch = () => {
 
 <template>
   <div class="px-4 py-3">
-    <div class="mx-auto max-w-2xl text-white">
+    <div class="max-w-2xl mx-auto text-white">
       <input
         v-model="searchQuery"
         type="text"
-        class="w-full border-b border-gray-400/60 bg-transparent placeholder-white outline-none"
+        class="w-full placeholder-white bg-transparent border-b outline-none border-gray-400/60"
         placeholder="Search the city..."
         @input="handleInputSearch" />
       <ul
         v-if="queryResults"
-        class="mt-2 rounded-lg bg-white/20 px-2 py-1">
+        class="px-2 py-1 mt-2 rounded-lg bg-white/20">
         <p
           v-if="isSearchErr"
-          class="py-2 px-2">
+          class="px-2 py-2">
           Sorry, something went wrong, please try again.
         </p>
         <p
           v-if="!isSearchErr && queryResults.length === 0"
-          class="py-2 px-2">
+          class="px-2 py-2">
           No results match your query, try a different term.
         </p>
         <template v-else>
           <li
             v-for="result in queryResults"
             :key="result.id"
-            class="group flex cursor-pointer items-center"
+            class="flex items-center cursor-pointer group"
             @click="handleCityPreview(result)">
             <Icon icon="ic:round-arrow-right" />
             <p class="group-hover:text-red-300">{{ result.place_name }}</p>

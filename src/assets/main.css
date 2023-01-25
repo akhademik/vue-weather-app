@@ -3,5 +3,18 @@
 @tailwind utilities;
 
 .check {
-	border: 1px dashed red;
+  border: 1px dashed red;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  //outline: 1px dashed red;
 }
